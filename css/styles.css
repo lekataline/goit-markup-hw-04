@@ -179,6 +179,8 @@ ul {
 } */
 
 .contact-nav-link {
+  display: flex;
+  align-items: center;
   color: var(--main-txt-cl);
 }
 
@@ -220,7 +222,6 @@ ul {
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
 
@@ -338,7 +339,7 @@ ul {
 }
 
 .features-subtitle {
-  padding-top: 30px;
+  margin-top: 30px;
   margin-bottom: 10px;
 
   color: var(--heading-txt-cl);
@@ -456,26 +457,27 @@ ul {
   align-items: flex-start;
   gap: 30px;
 }
-
-.client-card {
-  display: block;
-  padding-top: 16px;
-  padding-right: 32px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-
-  border: 1px solid var(--border-card-cl);
-  border-radius: 4px;
+.clients-item {
+  width: 170px;
+  height: 92px;
 }
 
+
 .client-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   fill: var(--border-card-cl);
+  border: 1px solid var(--border-card-cl);
+  border-radius: 4px;
+
 }
 
 .client-link:hover,
-.client-link:focus,
-.client-card:hover,
-.client-card:focus {
+.client-link:focus {
   fill: var(--accent-bt-cl);
   border: 1px solid var(--accent-bt-cl);
 
@@ -520,24 +522,15 @@ ul {
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
-  padding: 6px 25px;
+  /* padding: 6px 25px; */
 
   color: var(--light-txt-cl);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  text-align: center;
-  letter-spacing: 0.03em;
 
   /* bg */
   background: var(--accent-bt-cl);
   /* shadow-middle */
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  /* padding: 6px 25px; */
-
-  cursor: pointer;
 }
 
 /**
@@ -559,16 +552,15 @@ ul {
   background: var(--bg-cl);
 }
 
-.gallery-list:hover {
-  cursor: pointer;
+.gallery-list a:hover .gallery-card,
+.gallery-list a:focus .gallery-card {
 
-  background: var(--bg-cl);
-  border: 1px solid var(--border-ln-cl);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.gallery-card {
+
+.gallery-card-desc {
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 20px;
@@ -588,7 +580,7 @@ ul {
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
 }
-
+  
 .gallery-list:not(:nth-child(3n)) {
   margin-right: 30px;
 }
@@ -621,6 +613,7 @@ ul {
 .footer-list {
   display: flex;
   gap: 70px;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -665,7 +658,6 @@ ul {
 
 .socials-subtt-ft {
   margin-bottom: 20px;
-  padding-top: 10px;
   align-items: baseline;
   align-content: center;
 
